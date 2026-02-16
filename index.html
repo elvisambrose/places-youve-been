@@ -1,14 +1,22 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Places You've Been</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
 <body>
-  <h1>Places I've Been</h1>
-  <ul id="places-list"></ul>
-  <div id="place-details"></div>
-  <script src="js/places.js"></script>
-  <script src="js/app.js"></script>
-</body>
-</html>
+    <h1>Places You've Been</h1>
+  
+    <form id="place-form">
+      <label>Place Name: <input type="text" id="place-name"></label><br>
+      <label>Location: <input type="text" id="location"></label><br>
+      <label>Landmarks: <input type="text" id="landmarks"></label><br>
+      <label>Time of Year: <input type="text" id="time"></label><br>
+      <label>Notes: <input type="text" id="notes"></label><br>
+      <button type="submit">Add Place</button>
+    </form>
+  
+    <h2>Your Places</h2>
+    <ul id="places-list"></ul>
+  
+    <h2>Details</h2>
+    <div id="place-details"></div>
+  
+    <script src="js/places.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+  
