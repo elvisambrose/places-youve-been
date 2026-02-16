@@ -1,13 +1,11 @@
-const places = [
-    new Place("Nairobi", "Nairobi National Park", "Summer", "Saw lions and giraffes"),
-    new Place("Mombasa", "Fort Jesus", "Winter", "Loved the coastal vibe"),
-    new Place("Kisumu", "Lake Victoria", "Spring", "Enjoyed the sunset by the lake"),
-    new Place("Eldoret", "Chepkit Waterfalls", "Spring", "Enjoyed the waterfall with lush surroundngs"),
-  ];
-  
-  const list = document.getElementById("places-list")
-  const details = document.getElementById("place-details");
-  
+const places = [];
+
+const list = document.getElementById("places-list");
+const details = document.getElementById("place-details");
+const form = document.getElementById("place-form");
+
+function renderPlaces() {
+  list.innerHTML = "";
   places.forEach((place, index) => {
     const li = document.createElement("li");
     li.textContent = place.location;
@@ -16,4 +14,19 @@ const places = [
     });
     list.appendChild(li);
   });
-  
+}
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  const name = document.getElementById("place-name").value;
+  const location = document.getElementById("location").value;
+  const landmarks = document.getElementById("landmarks").value;
+  const time = document.getElementById("time").value;
+  const notes = document.getElementById("notes").value;
+
+  const newPlace = new Place(location, landmarks, time, notes);
+  places.push(newPlace);
+
+  renderPlaces();
+  form.reset();
+});
