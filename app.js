@@ -1,7 +1,7 @@
 const places = [
     new Place("Nairobi", "Nairobi National Park", "Summer", "Saw lions and giraffes"),
     new Place("Mombasa", "Fort Jesus", "Winter", "Loved the coastal vibe"),
-    new Place("Kisumu", "Lake Victoria", "Spring", "Enjoyed the sunset by the lake")
+    new Place("Kisum", "Lake Victoria", "Spring", "Enjoyed the sunset by the lake")
   ];
   
   const list = document.getElementById("places-list");
