@@ -1,4 +1,4 @@
-const places = [];
+const places = JSON.parse(localStorage.getItem("places")) || [];
 
 const list = document.getElementById("places-list");
 const details = document.getElementById("place-details");
@@ -16,6 +16,10 @@ function renderPlaces() {
   });
 }
 
+function savePlaces() {
+  localStorage.setItem("places", JSON.stringify(places));
+}
+
 form.addEventListener("submit", function(event) {
   event.preventDefault();
   const name = document.getElementById("place-name").value;
@@ -27,6 +31,9 @@ form.addEventListener("submit", function(event) {
   const newPlace = new Place(location, landmarks, time, notes);
   places.push(newPlace);
 
+  savePlaces();
   renderPlaces();
   form.reset();
 });
+
+renderPlaces();
