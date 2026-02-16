@@ -10,7 +10,8 @@ A website to track destinations I’ve visited, with notes, landmarks, and seaso
 2. Open `index.html` in a browser.  
 
 ## Live Site
-[GitHub Pages Link]  
+https://github.com/elvisambrose/places-youve-been.git
+
 
 ## License
 MIT © 2026 Elvis  
