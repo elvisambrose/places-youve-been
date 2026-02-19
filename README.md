@@ -17,4 +17,4 @@ Users can:
 ## Setup Instructions
 1. Clone this repository:
    ```bash
-   git clone https://github.com/<your-username>/places-youve-been.git
+   git clone https://github.com/elvisambrose/places-youve-been.git
