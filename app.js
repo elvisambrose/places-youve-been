@@ -6,9 +6,9 @@ const form = document.getElementById("place-form");
 
 function renderPlaces() {
   list.innerHTML = "";
-  places.forEach((place, index) => {
+  places.forEach((place) => {
     const li = document.createElement("li");
-    li.textContent = place.location;
+    li.textContent = place.name;
     li.addEventListener("click", () => {
       details.textContent = place.summary();
     });
@@ -28,7 +28,7 @@ form.addEventListener("submit", function(event) {
   const time = document.getElementById("time").value;
   const notes = document.getElementById("notes").value;
 
-  const newPlace = new Place(location, landmarks, time, notes);
+  const newPlace = new Place(name, location, landmarks, time, notes);
   places.push(newPlace);
 
   savePlaces();
