@@ -1,4 +1,5 @@
-function Place(location, landmarks, timeOfYear, notes) {
+function Place(name, location, landmarks, timeOfYear, notes) {
+    this.name = name;
     this.location = location;
     this.landmarks = landmarks;
     this.timeOfYear = timeOfYear;
@@ -6,6 +7,6 @@ function Place(location, landmarks, timeOfYear, notes) {
   }
   
   Place.prototype.summary = function() {
-    return `${this.location} (${this.timeOfYear}): ${this.landmarks}. Notes: ${this.notes}`;
+    return `${this.name} - ${this.location} (${this.timeOfYear}): ${this.landmarks}. Notes: ${this.notes}`;
   };
   
