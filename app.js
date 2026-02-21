@@ -1,24 +1,21 @@
-// Array to hold Place objects
 const places = [];
 
 const list = document.getElementById("places-list");
 const details = document.getElementById("place-details");
 const form = document.getElementById("place-form");
 
-// Render all places in the list
 function renderPlaces() {
   list.innerHTML = "";
   places.forEach((place) => {
     const li = document.createElement("li");
-    li.textContent = place.name; // Show Place Name
+    li.textContent = place.name;
     li.addEventListener("click", () => {
-      details.textContent = place.summary(); // Use prototype method
+      details.textContent = place.summary();
     });
     list.appendChild(li);
   });
 }
 
-// Handle form submission
 form.addEventListener("submit", function(event) {
   event.preventDefault();
   const name = document.getElementById("place-name").value;
